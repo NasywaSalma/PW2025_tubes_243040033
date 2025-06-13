@@ -227,7 +227,7 @@ $total_pendaftaran = count($data_pendaftaran);
     <div class="container mt-4 mb-5">
         <div class="card shadow-lg">
             <div class="header text-white d-flex justify-content-between align-items-center bg-primary p-3 rounded-top">
-                <h4 class="mb-0"><i class="bi bi-table me-2"></i>Subscribers</h4>
+                <h4 class="mb-0"><i class="bi bi-table me-2"></i>Country</h4>
                 <a href="tambah/country.php" class="btn btn-light btn-custom shadow-sm"><i class="bi bi-plus-circle me-1"></i>add data</a>
             </div>
             <div class="card-body">
@@ -250,12 +250,14 @@ $total_pendaftaran = count($data_pendaftaran);
                     
                                         <td class="aksi-btns">
 
-                                            <a href="ubah/ubahcountry.php?id=<?= $akun['id']; ?>" class="btn btn-success btn-sm btn-custom" title="Ubah Data">
-                                                <i class="bi bi-pencil-square"></i>
-                                           
-                                            <a href="hapus/hapuscountry.php?id=<?= $akun['id']; ?>" class="btn btn-danger btn-sm btn-custom" onclick="return confirm('Delete this contact?');" title="Hapus Data">
-                                                <i class="bi bi-trash"></i>
-                                            </a>
+                                            <div class="d-flex justify-content-center">
+                                                <a href="ubah/ubahcountry.php?id=<?= $akun['id']; ?>" class="btn btn-success btn-sm btn-custom me-1" title="Ubah Data">
+                                                    <i class="bi bi-pencil-square"></i>
+                                                </a>
+                                                <a href="hapus/hapuscountry.php?id=<?= $akun['id']; ?>" class="btn btn-danger btn-sm btn-custom" onclick="return confirm('Delete this contact?');" title="Hapus Data">
+                                                    <i class="bi bi-trash"></i>
+                                                </a>
+                                            </div>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

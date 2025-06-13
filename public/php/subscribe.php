@@ -22,25 +22,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("s", $email);
 
         if ($stmt->execute()) {
-            echo "Berhasil berlangganan.";
-            
-            $to = "admin@example.com";
-            $subject = "Langganan Baru";
-            $message = "Email baru berlangganan: $email";
-            $headers = "From: no-reply@example.com";
-
-            mail($to, $subject, $message, $headers);
+             echo "<script>
+                alert('Sucssesed to Register!');
+                document.location.href = 'subscribe.php';
+              </script>";
         } else {
-            echo "Email sudah terdaftar atau terjadi kesalahan.";
+            echo "<script>
+                alert('Failed to Register or Your account already registered!');
+                document.location.href = 'subscribe.php';
+              </script>";
         }
 
-        $stmt->close();
-    } else {
-        echo "Email tidak valid.";
-    }
-} else {
-    echo "Metode tidak diizinkan.";
-}
+    } 
+} 
 
 $conn->close();
 ?>
